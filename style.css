@@ -1,0 +1,25 @@
+:root {
+    --grid-cols: 0.1;
+    --grid-rows: 0.1;
+  }
+  #container {
+    height: 1200px;
+    width: 1200px;
+    background: #cdacac;
+    justify-content: center;
+    margin: auto;
+    top: 50%;
+    transform: translate(0, 20%);
+    display: grid;
+    grid-gap: 0em;
+    grid-template-rows: repeat(var(--grid-rows), 0fr);
+    grid-template-columns: repeat(var(--grid-cols), 0fr);
+    border: 10px solid rgb(8, 8, 8);
+    border-radius: 20px;
+    -webkit-transform: translate(0, 20%);
+    -moz-transform: translate(0, 20%);
+    -ms-transform: translate(0, 20%);
+    -o-transform: translate(0, 20%);
+}
+
+
