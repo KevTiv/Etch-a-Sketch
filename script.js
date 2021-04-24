@@ -22,8 +22,6 @@ function makeSquareGrid(rows, cols){
     }
     let gridCells = document.querySelectorAll(".grid-item")
     gridCells.forEach(cell => cell.addEventListener('mouseenter', changeColor));
-
-    
 }
 
 makeSquareGrid(starterRows, starterColumns);
@@ -45,6 +43,7 @@ function getRandomColor() {
 
 // DIV for reset button
 const modificationDiv = document.createElement("div");
+body.appendChild(modificationDiv).className = "button";
 body.appendChild(modificationDiv);
 
 //Button to modify grid
@@ -52,6 +51,7 @@ const modifyButton = document.createElement("button");
 modifyButton.innerText = "Modify";
 modifyButton.style.marginRight = 15 + 'px';
 modifyButton.style.marginTop = 15 + 'px';
+modificationDiv.appendChild(modifyButton).id = "modify_button";
 modificationDiv.appendChild(modifyButton);
 
 modifyButton.addEventListener("click", updateGrid);
@@ -78,6 +78,7 @@ function updateGrid(){
 const resetButton = document.createElement("button");
 resetButton.innerText = "Reset";
 resetButton.style.marginTop = 15 + 'px';
+modificationDiv.appendChild(resetButton).id = "reset_button";
 modificationDiv.appendChild(resetButton);
 
 resetButton.addEventListener("click", clearAllColors);
@@ -87,8 +88,8 @@ function clearAllColors(){
     let gridCells = document.querySelectorAll(".grid-item");
     let gridIndex = 0;
     while(gridCells[gridIndex]){
-        if (gridCells[gridIndex].style.backgroundColor !== '#FFFFFF'){
-            gridCells[gridIndex].style.backgroundColor = '#FFFFFF';
+        if (gridCells[gridIndex].style.backgroundColor !== '#d69ff0'){
+            gridCells[gridIndex].style.backgroundColor = '#d69ff0';
         }
         gridIndex++;
     }
